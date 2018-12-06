@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta property="og:title" content="메로나주 레시피" />
+  <meta property="og:description" content="꿀조합레시피 다알려준다! 드루와~ 드루와~" />
+  <meta property="og:image" content="merona.png" />
+  <title>메로나주 세부내용</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+  var bDisplay = true;
+  function doDisplay(){
+      var con = document.getElementById("myDIV");
+      if(con.style.display=='none'){
+          con.style.display = 'block';
+      }else{
+          con.style.display = 'none';
+      }
+  }
+
+  function deleteBtn() {
+    document.getElementById("content1").style.display = "none";
+}
+  </script>
+</head>
+
+<body>
+
+  <div id="container">
+    <a onclick="javascript:location.href='gallery.html';"><img src=back.png width=40px height=40px></a>
+    <a onclick="javascript:location.href='index.html';" style="float:right;"><img src=home.png width=40px height=40px></a>
+    <div id="header">
+      <h1>메로나주<br>★★★★☆</h1>
+      <div class="fb-share-button" data-href="http://like-us.kr/g4/detail_03.html" data-layout="button" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">공유하기</a></div>
+    </div>
+    <div id="content">
+      <img src="merona.png">
+      <p><strong>메로나주 비율 </strong><br>소주2+사이다4+메로나</p>
+    </div>
+    <div id="content">
+      <p><strong>유투브영상</strong></p>
+      <iframe width="100%" height="300px" src="https://www.youtube.com/embed/QIf9xdvd7RA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div id="content1" onclick="javascript:deleteBtn();">
+      <a href="javascript:doDisplay();"><p style="text-align:center;">만드는 방법 보기</p></a>
+    </div>
+
+    <div id="myDIV" style="display:none">
+      <p>1. 빈컵을 준비한다. <br><br>2.준비된 빈컵에 메로나를 넣는다.
+      <br><br>3.소주2+사이다4 비율로 본인 주량껏 넣어 섞는다. <br><br>4. 메로나 1/3정도가 녹을때까지 저어준다.</p>
+    </div>
+    <div id="footer">
+      <p>광고배너</p>
+    </div>
+  </div>
+
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+
+</html>
