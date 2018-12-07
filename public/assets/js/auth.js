@@ -63,7 +63,8 @@ function signup() {
     var errorMessage = error.message;
 
     alert(error.message);
-  });
+  })
+  
 }
 
 function facebooklogin() {

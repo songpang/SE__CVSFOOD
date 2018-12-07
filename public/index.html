@@ -22,7 +22,8 @@
         <li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
         <li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
         <li><a href="http://like-us.kr/g5/bbs/board.php?bo_table=free"><span class="icon fa-file-text-o"></span></a></li>
-        <li><a onclick = logout()><span class="icon fa-camera-retro"></span></a></li>
+        <li><a><span class="icon fa-random"></span></a></li>
+        <li><a onclick = logout()><span class="icon fa-unlock-alt"></span></a></li>        
         <!--<li><a href="login.html"><span class="icon fa-lock"></span></a></li> -->
 
       </ul>
@@ -34,8 +35,11 @@
       <!-- Banner -->
       <section id="banner">
         <div class="inner">
-          <h1>편의점꿀조합레시피</h1>
-          <p>밥먹듯이 가는 편의점에서 발견합 최강조합</a></p>
+          <h1>편의점레시피</h1>
+          <p>편의점에서 발견합 최강조합</p>
+          <li><span id="lbleamil" style="color:white"></span>님 반갑습니다.</li>
+          <li>오늘은 어떤걸 드시고 싶으신가요 ?</li>
+          <p> </p>
           <ul class="actions">
             <li><a href="#galleries" class="button alt scrolly big">꿀조합 보러가기</a></li>
           </ul>
@@ -101,6 +105,22 @@
 
       </section>
 
+      <section id="two" class="wrapper style2">
+          <div class="inner">
+            <div class="box">
+              <div class="content">
+                <header class="align-center">
+                  <h2>발도장</h2>
+                </header>
+                <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+              </div>
+            </div>
+            <a class="button" onclick="newpost()">NEW</a>
+            <a class="button" onclick="loadpost()">LOAD</a>
+            <a class="button" onclick="update()">UPDATE</a>
+            <a class="button" onclick="deletepost()">DELETE</a>
+          </div>
+        </section>
       <!-- Footer -->
       <footer id="footer">
         <div class="copyright">
@@ -131,6 +151,8 @@
   <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-storage.js"></script>
 
   <script src="./assets/js/auth.js"></script>
+  <script src="./assets/js/test.js"></script>
+
 
 </body>
 
