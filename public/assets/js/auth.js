@@ -56,16 +56,16 @@ function logout() {
   });
 }
 
-function signup() {
-  firebase.auth().createUserWithEmailAndPassword($('#txtemail').val(), $('#txtpasswd').val()).catch(function (error) {
-    //Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
+// function signup() {
+//   firebase.auth().createUserWithEmailAndPassword($('#txtemail').val(), $('#txtpasswd').val()).catch(function (error) {
+//     //Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
 
-    alert(error.message);
-  })
-  
-}
+//     alert(error.message);
+//   })
+
+// }
 
 function facebooklogin() {
   var user = firebase.auth().currentUser;
@@ -105,3 +105,6 @@ function googlelogin() {
     });
   }
 }
+
+
+
