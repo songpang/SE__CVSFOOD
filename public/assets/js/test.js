@@ -122,3 +122,30 @@ function savetostorage() {
     );
   }
 }
+
+
+$(function () {
+  var count = $('#rank-list li').length;
+  var height = $('#rank-list li').height();
+
+  function step(index) {
+    $('#rank-list ol').delay(2000).animate({
+      top: -height * index,
+    }, 500, function () {
+      step((index + 1) % count);
+    });
+  }
+  step(1);
+});
+
+function GPage_Load() {
+  var input_name = $("#input_name").val();
+
+  location.href = "https://www.google.com/search?q=" + input_name + "";
+}
+
+function YPage_Load() {
+  var input_name = $("#input_name").val();
+
+  location.href = "https://www.youtube.com/results?search_query=" + input_name + "";
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        function Page_Load() {
+            var id = $("#user_id").val();
+
+            location.href = "https://www.youtube.com/results?search_query=" + id +  "";
+        }
+    </script>
+</head>
+
+<body>
+    아이디:<input class="text" id="user_id" name="id" style="width:290px;" value="" />
+    <a href="#" class="btnA" onclick="Page_Load();return false"><button>링크</button></a>
+
+</body>
+
+</html>

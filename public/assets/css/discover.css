@@ -1,15 +1,14 @@
 
-body {
-    font-size: 12px;
-    background: #FFF;
-    color: #333;
-    margin: 0;
-}
-
 #content {
     margin: 20px;
     padding: 10px;
-    background: #393;
+    background: linear-gradient( 45deg, #f2709c, #ff9472 );;
+}
+
+#contentA {
+    margin: 20px;
+    padding: 10px;
+    background: linear-gradient( 45deg, #ff9472, #f2709c ); ;
 }
 
 #rank-list a {
