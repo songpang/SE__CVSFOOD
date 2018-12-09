@@ -23,11 +23,11 @@
     <!-- Nav -->
     <nav id="nav">
       <ul>
-        <li><a href="index.html" ><span class="icon fa-home"></span></a></li>
+        <li><a href="index.html"><span class="icon fa-home"></span></a></li>
         <li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
         <li><a href="http://like-us.kr/g5/bbs/board.php?bo_table=free"><span class="icon fa-file-text-o"></span></a></li>
-        <li><a href="profile.html" class="active"><span class="icon fa-info" ></span></a></li>
-        <li><a href="https://github.com/songpang/SE__CVSFOOD"><span class="icon fa-github" ></span></a></li>
+        <li><a href="profile.html" class="active"><span class="icon fa-info"></span></a></li>
+        <li><a href="https://github.com/songpang/SE__CVSFOOD"><span class="icon fa-github"></span></a></li>
         <li><a onclick=logout()><span class="icon fa-unlock-alt"></span></a></li>
         <!--<li><a href="login.html"><span class="icon fa-lock"></span></a></li> -->
 
@@ -60,25 +60,44 @@
           </header>
 
 
-          <Button onclick = "myrecipeview()">최근 추가한 레시피 보기 </Button>
+          <script>
+            function myrecipeview1() {
+
+              var user = firebase.auth().currentUser;
+              var myreciperef = firebase.database().ref('user/' + user.uid);
+              if (user) {
+                myreciperef.on('value', function (snapshot) {
+                  var message = snapshot.val();
+                  targeturl = message.likepost;
+
+                  $("#rank1").attr("href", targeturl)
+                  $("#rank1").text("Lastest Recipe Link Here")
+
+                  console.log(targeturl);
+
+                });
+              }
+            }</script> 
+            <!-- // myrecipeview1 함수 에러로 인한 스크립트 추가 -->
+          <Button onclick="myrecipeview1()">최근 추가한 레시피 </Button>
           <br>
           <li><a id="rank1" href="#"></a>
           </li>
           <br><br><br>
 
           <div class="content">
-              <div class="media">
-                  <a href="images/fulls/a001.jpg"><img src="images/thumbs/a001.jpg" alt="" title="This right here is a caption." /></a>
-                </div>
-                <div class="media">
-                  <a href="images/fulls/a002.jpg"><img src="images/thumbs/a002.jpg" alt="" title="This right here is a caption." /></a>
-                </div>
-                <div class="media">
-                  <a href="images/fulls/b001.jpg"><img src="images/thumbs/b001.jpg" alt="" title="This right here is a caption." /></a>
-                </div>
-                <div class="media">
-                  <a href="images/fulls/b002.jpg"><img src="images/thumbs/b002.jpg" alt="" title="This right here is a caption." /></a>
-                </div>
+            <div class="media">
+              <a href="images/fulls/a001.jpg"><img src="images/thumbs/a001.jpg" alt="" title="This right here is a caption." /></a>
+            </div>
+            <div class="media">
+              <a href="images/fulls/a002.jpg"><img src="images/thumbs/a002.jpg" alt="" title="This right here is a caption." /></a>
+            </div>
+            <div class="media">
+              <a href="images/fulls/b001.jpg"><img src="images/thumbs/b001.jpg" alt="" title="This right here is a caption." /></a>
+            </div>
+            <div class="media">
+              <a href="images/fulls/b002.jpg"><img src="images/thumbs/b002.jpg" alt="" title="This right here is a caption." /></a>
+            </div>
       </section>
 
       <!-- Contact -->
@@ -125,7 +144,6 @@
   <script src="./assets/js/auth.js"></script>
   <script src="./assets/js/test.js"></script>
   <script src="./assets/js/myrecipe.js"></script>
-
 
 
 </body>
