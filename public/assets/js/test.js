@@ -20,7 +20,7 @@ function loadpost() {
   var user = firebase.auth().currentUser;
   if (user) {
     var ref = firebase.database().ref("post/");
-    ref.orderByChild('uid').equalTo(user.uid).limitToLast(1).on('value', function (data) { // once 대신 on 하면 실시간 display (using timeline) (firebase 의 정책상 과금될 우려)
+    ref.orderByChild('uid').limitToLast(1).on('value', function (data) { // once 대신 on 하면 실시간 display (using timeline) (firebase 의 정책상 과금될 우려)
       data.forEach(function (sdata) {
         $("#message").val(sdata.val().contents);
         $("#message").attr('key', sdata.key);
