@@ -14,7 +14,6 @@ firebase.initializeApp(config);
 $(document).ready(function ($) {
   firebase.auth().onAuthStateChanged(function (user) {
 
-
     var cu = window.location.href;
     var n1 = cu.indexOf('login');
     if (user) {

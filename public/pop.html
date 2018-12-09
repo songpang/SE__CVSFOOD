@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>ads</title>
+<meta charset="utf-8" />
+<head>
+  <style>
+  #wrap{width:100%;position:relative;z-index:1}
+  #wrap ul li{width:100%;position:fixed;top:0;left:0;}
+  #wrap ul li img{width:100%;border:none}
+  </style>
+  
+<script language="JavaScript">
+
+function setCookie( name, value, expiredays )
+{
+var todayDate = new Date();
+todayDate.setDate( todayDate.getDate() + expiredays );
+document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+function closeWin()
+{
+if ( document.myform.event.checked )
+setCookie("memo", "no" , 1); // 1일 간 쿠키적용
+}
+//-->
+</script>
+</head>
+<body onunload="closeWin()">
+<form name="myform">
+  <div id ="wrap" style ="text-align:center;"><a href="http://hotevent.hotblood.co.kr/index.php/app_1051"><img src="images/ad.png" alt="" title ="ads"></a></div>
+
+<input type="checkbox" name="event">다음부터 이 창을 열지않음
+<input type=button value="닫기" onclick="self.close()">
+</form>
+</body>
+</html>

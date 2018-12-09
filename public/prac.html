@@ -3,20 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script type="text/javascript">
-        function Page_Load() {
-            var id = $("#user_id").val();
-
-            location.href = "https://www.youtube.com/results?search_query=" + id +  "";
-        }
-    </script>
 </head>
 
 <body>
-    아이디:<input class="text" id="user_id" name="id" style="width:290px;" value="" />
-    <a href="#" class="btnA" onclick="Page_Load();return false"><button>링크</button></a>
+
+<button onclick = myrecipeview()>버튼입니다</button>
+<button onclick=likepostup()>업데이트하세요.</button>
+<button id = "likepost11" href="#">내가 좋아요한 페이지 가기</button>
+
 
 </body>
 
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-functions.js"></script>
+
+  <!-- Comment out (or don't include) services that you don't want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-storage.js"></script>
+
+  <script src="./assets/js/auth.js"></script>
+  <script src="./assets/js/test.js"></script>
+  <script src="./assets/js/myrecipe.js"></script>
+  
 </html>

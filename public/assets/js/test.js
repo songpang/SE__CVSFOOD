@@ -76,54 +76,6 @@ function deletepost() {
 
 }
 
-
-function uploadimage() {
-  $("#fileinput").click();
-}
-
-$('#fileinput').on('change', function () { onLoadImage(this); });
-
-function onloadimage(input) {
-  if (input.files && input.files[0]) {
-    var items = input.files[0];
-    var _size = items.size;
-    var _itemsize = Math.round(items.size / 1024 / 1024);
-    console.log(_size);
-    if (_size > 5000000) {
-      alert("Allowed file size exceeded. (Max. 5 MB), Current file size is [" + _itemsize + " MB]", 'error');
-    }
-    else {
-      var reader = new FileReader();
-      reader.onload = function (e) {
-        $("#myimg").attr('result', e.target.result);
-        savetostorage(items);
-      }
-      reader.readAsDataURL(input.files[0]);
-    }
-  }
-  else { alert("Sorry - you're browser doesn't support the FileReader API"); }
-}
-
-function savetostorage() {
-  var user = firebase.auth().currentUser;
-  if (user) {
-    var storageRef = firebase.storage().ref();
-    var _name = items.name.replace(/[~`!#$%\^&*+=\-\[\]\\';,/{}()|\\":<>\?]/g, "");
-    var uploadTask = storageRef.child('data/' + user.uid + "/" + _name).put(items);
-    uploadTask.on('state_changed', function (snapshot) { },
-      function (error) {
-        console.log(error);
-      },
-      function () {
-        uploadTask.snapshot.ref.getDownloadURL().
-          then(function (downloadURL) {
-          });
-      }
-    );
-  }
-}
-
-
 $(function () {
   var count = $('#rank-list li').length;
   var height = $('#rank-list li').height();

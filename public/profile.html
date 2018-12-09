@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<!--
+	Snapshot by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+  <title>편의점꿀조합레시피</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="./assets/css/discover.css" media="screen" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="page-wrap">
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html" ><span class="icon fa-home"></span></a></li>
+        <li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
+        <li><a href="http://like-us.kr/g5/bbs/board.php?bo_table=free"><span class="icon fa-file-text-o"></span></a></li>
+        <li><a href="profile.html" class="active"><span class="icon fa-info" ></span></a></li>
+        <li><a href="https://github.com/songpang/SE__CVSFOOD"><span class="icon fa-github" ></span></a></li>
+        <li><a onclick=logout()><span class="icon fa-unlock-alt"></span></a></li>
+        <!--<li><a href="login.html"><span class="icon fa-lock"></span></a></li> -->
+
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <section id="main">
+      <section id="contact">
+        <!-- Social -->
+        <div class="social column">
+          <h1>MY PAGE</h1>
+          <ul class="icons">
+            <span id="lbleamil" style="color:black"></span>님 반갑습니다.</ul>
+        </div>
+        <div class="column">
+          <h3>후원의 손길</h3>
+          <span>312-0120-0813-61(농협) 예금주 : 송현수</span><br><br>
+          <span>단돈 1원이라도 감사하게 받겠습니다.</span>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section id="galleries">
+
+        <!-- Photo Galleries -->
+        <div class="gallery">
+          <header class="special">
+            <h2>MY RECIPE</h2>
+          </header>
+
+
+          <Button onclick = "myrecipeview()">최근 추가한 레시피 보기 </Button>
+          <li><a id="rank1" href="#"></a>
+            <a id="rank2" href="#" visible = on></a>
+            <a id="rank3" href="#"></a>
+            <a id="rank4" href="#"></a>
+          </li>
+
+          <div class="content">
+            <div class="media">
+              <a href="images/fulls/a001.jpg"><img src="images/thumbs/a001.jpg" alt="" title="-" /></a>
+            </div>
+            <div class="media">
+              <a href="images/fulls/a002.jpg"><img src="images/thumbs/a002.jpg" alt="" title="-" /></a>
+            </div>
+          </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <!-- Social -->
+        <div class="social column">
+          <h3>편의점 꿀조합 레시피 SNS</h3>
+          <ul class="icons">
+            <li><a href="https://www.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/?hl=ko" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="copyright">
+          &copy; 편의점꿀조합레시피
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.poptrox.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>
+
+  <!-- Add additional services that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-messaging.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-functions.js"></script>
+
+  <!-- Comment out (or don't include) services that you don't want to use -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-storage.js"></script>
+
+  <script src="./assets/js/auth.js"></script>
+  <script src="./assets/js/test.js"></script>
+  <script src="./assets/js/myrecipe.js"></script>
+
+
+
+</body>
+
+</html>

@@ -22,16 +22,18 @@
 
     <!-- Nav -->
     <nav id="nav">
-      <ul>
-        <li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
-        <li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
-        <li><a href="http://like-us.kr/g5/bbs/board.php?bo_table=free"><span class="icon fa-file-text-o"></span></a></li>
-        <li><a><span class="icon fa-random"></span></a></li>
-        <li><a onclick=logout()><span class="icon fa-unlock-alt"></span></a></li>
-        <!--<li><a href="login.html"><span class="icon fa-lock"></span></a></li> -->
-
-      </ul>
-    </nav>
+        <ul>
+          <li><a href="index.html" class="active"><span class="icon fa-home"></span></a></li>
+          <li><a href="gallery.html"><span class="icon fa-camera-retro"></span></a></li>
+          <li><a href="http://like-us.kr/g5/bbs/board.php?bo_table=free"><span class="icon fa-file-text-o"></span></a></li>
+          <li><a href="profile.html"><span class="icon fa-info" ></span></a></li>
+          <li><a href="https://github.com/songpang/SE__CVSFOOD"><span class="icon fa-github" ></span></a></li>
+          
+          <li><a onclick=logout()><span class="icon fa-unlock-alt"></span></a></li>
+          <!--<li><a href="login.html"><span class="icon fa-lock"></span></a></li> -->
+  
+        </ul>
+      </nav>
 
     <!-- Main -->
     <section id="main">
@@ -55,39 +57,33 @@
         <dl id="rank-list">
           <dd>
             <ol id="fontsize85">
-              <li><a id="linkMyBlog" href="#">
-                  <ranktext></ranktext>
-                </a></li>
-              <li><a href="#">2 순위</a></li>
-              <li><a href="#">3 순위</a></li>
-              <li><a href="#">4 순위</a></li>
-              <li><a href="#">5 순위</a></li>
-              <li><a href="#">6 순위</a></li>
-              <li><a href="#">7 순위</a></li>
-              <li><a href="#">8 순위</a></li>
-              <li><a href="#">9 순위</a></li>
-              <li><a href="#">10 순위</a></li>
+              <li><a href="#">★ 관리자의 추천 레시피 ★</a></li>
+              <li><a href="#">1. 망고 메로나주</a></li>
+              <li><a href="#">2. 오모리 김치찌개라면</a></li>
+              <li><a href="#">3. 라면볶이 + 자떡</a></li>
+              <li><a href="#">4. 모구모구 스파클링</a></li>
+              <li><a href="#">5. 초코 바나나라떼</a></li>
+              <li><a href="#">6. 유자배 에이드</a></li>
+              <li><a href="#">7. 딸기 메로나주</a></li>
             </ol>
           </dd>
         </dl>
       </div>
 
-
       <div id="contentA">
-          <!-- <input type="text" id="user_id" name="id" style="width:290px;" value="" /> -->
-<div style = "padding: 0px 0px 10px 0px;">
-          <input type="text" name="name" id="input_name" value=""
-           placeholder="찾고싶은 레시피를 입력해주세요." />
-          </div>
-          <!-- Break -->
+        <!-- <input type="text" id="user_id" name="id" style="width:290px;" value="" /> -->
+        <div style="padding: 0px 0px 10px 0px;">
+          <input type="text" name="name" id="input_name" value="" placeholder="찾고싶은 레시피를 입력해주세요." />
+        </div>
+        <!-- Break -->
         <div>
-          <button href="#"  float ="right" class="button special icon fa-youtube-play"
-           onclick="YPage_Load();return false"> YOUTUBE
+          <button href="#" float="right" class="button special icon fa-youtube-play" onclick="YPage_Load();return false">
+            YOUTUBE
           </button>
           &nbsp;&nbsp;&nbsp;
-          <button href="#" float = "right" class="button special icon fa-google"
-           onclick="GPage_Load();return false"> GOOGLE</button>
-          </div>
+          <button href="#" float="right" class="button special icon fa-google" onclick="GPage_Load();return false">
+            GOOGLE</button>
+        </div>
       </div>
 
 
@@ -141,15 +137,9 @@
         <div class="social column">
           <h3>편꿀레SNS</h3>
           <ul class="icons">
-            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="https://www.facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/?hl=ko" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
           </ul>
-        </div>
-
-        <!-- Form -->
-        <div class="column">
-          <h3>카톡플러스친구 문의하기</h3>
-          <a href="#" class="button">편의점꿀조합레시피</a>
         </div>
 
       </section>
@@ -170,6 +160,7 @@
           <a class="button" onclick="deletepost()">DELETE</a>
         </div>
       </section>
+
       <!-- Footer -->
       <footer id="footer">
         <div class="copyright">
@@ -202,6 +193,46 @@
   <script src="./assets/js/auth.js"></script>
   <script src="./assets/js/test.js"></script>
 
+  <script language="javascript">
+
+    function getCookie(name) {
+      var Found = false
+      var start, end
+      var i = 0
+      // cookie 문자열 전체를 검색
+      while (i <= document.cookie.length) {
+        start = i
+        end = start + name.length
+        // name과 동일한 문자가 있다면
+        if (document.cookie.substring(start, end) == name) {
+          Found = true
+          break
+        }
+        i++
+      }
+      // name 문자열을 cookie에서 찾았다면
+      if (Found == true) {
+        start = end + 1
+        end = document.cookie.indexOf(";", start)
+        // 마지막 부분이라 는 것을 의미(마지막에는 ";"가 없다)
+        if (end < start)
+          end = document.cookie.length
+        // name에 해당하는 value값을 추출하여 리턴한다.
+        return document.cookie.substring(start, end)
+      }
+      // 찾지 못했다면
+      return ""
+    }
+    function openMsgBox() {
+      var eventCookie = getCookie("memo");
+      if (eventCookie != "no")
+        window.open('pop.html', '_blank', 'width=390,height=500,top=50,left=150');
+      //팝업창의 주소, 같은 도메인에 있어야 한다.
+    }
+    openMsgBox();
+      //-->
+  </script>
+</body>
 
 
 </body>
